@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html ng-app="vectora">
+
+<head>
+    <title>vectora.io</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+</head>
+
+<body ng-class="{'dragover': (dragDropState == 'dragover')}">
+    <div id="page">
+        <div class="colors-bar">
+          <span class="color-bar color-bar-1"></span>
+          <span class="color-bar color-bar-2"></span>
+          <span class="color-bar color-bar-3"></span>
+          <span class="color-bar color-bar-4"></span>
+          <span class="color-bar color-bar-5"></span>
+          <span class="color-bar color-bar-6"></span>
+          <span class="color-bar color-bar-7"></span>
+          <span class="color-bar color-bar-8"></span>
+          <span class="color-bar color-bar-9"></span>
+          <span class="color-bar color-bar-10"></span>
+          <span class="color-bar color-bar-11"></span>
+          <span class="color-bar color-bar-12"></span>
+          <span class="color-bar color-bar-13"></span>
+          <span class="color-bar color-bar-14"></span>
+          <span class="color-bar color-bar-15"></span>
+          <span class="color-bar color-bar-16"></span>
+          <span class="color-bar color-bar-17"></span>
+          <span class="color-bar color-bar-18"></span>
+          <span class="color-bar color-bar-19"></span>
+          <span class="color-bar color-bar-20"></span>
+          <span class="color-bar color-bar-21"></span>
+          <span class="color-bar color-bar-22"></span>
+          <span class="color-bar color-bar-23"></span>
+          <span class="color-bar color-bar-24"></span>
+          <span class="color-bar color-bar-25"></span>
+          <span class="color-bar color-bar-26"></span>
+          <span class="color-bar color-bar-27"></span>
+          <span class="color-bar color-bar-28"></span>
+          <span class="color-bar color-bar-29"></span>
+          <span class="color-bar color-bar-30"></span>
+          <span class="color-bar color-bar-31"></span>
+          <span class="color-bar color-bar-32"></span>
+          <span class="color-bar color-bar-33"></span>
+          <span class="color-bar color-bar-34"></span>
+          <span class="color-bar color-bar-35"></span>
+          <span class="color-bar color-bar-36"></span>
+          <span class="color-bar color-bar-37"></span>
+          <span class="color-bar color-bar-38"></span>
+          <span class="color-bar color-bar-39"></span>
+          <span class="color-bar color-bar-40"></span>
+          <span class="color-bar color-bar-41"></span>
+          <span class="color-bar color-bar-42"></span>
+          <span class="color-bar color-bar-43"></span>
+          <span class="color-bar color-bar-44"></span>
+          <span class="color-bar color-bar-45"></span>
+          <span class="color-bar color-bar-46"></span>
+          <span class="color-bar color-bar-47"></span>
+          <span class="color-bar color-bar-48"></span>
+          <span class="color-bar color-bar-49"></span>
+          <span class="color-bar color-bar-50"></span>
+        </div>
+        <div id="header">
+            <div class="content-width">
+              <a href="#" class="logo">VECTORA</a>
+            </div>
+        </div>
+        <div id="examples-bar">
+          <div id="examples-wrap" class="content-width">
+            <h2>Convert pixel graphics into vector graphics, in seconds.</h2>
+            <div id="examples">
+            </div>
+          </div>
+        </div>
+        <div id="main">
+          <div id="main-inner">
+            <div class="drop-zone" ng-controller="DropZoneController" ng-file-drop droppable ng-model="files" drag-over-class="dragover" ng-multiple="false" allow-dir="false" accept="image/*">
+              <div class="drop-zone-inner">
+                <span>Drop your pixel graphic here</span>
+                <div class="picture-icon"><i class="fa fa-picture-o"></i></div>
+                <span>Or click to browse</span>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="dimmer"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.7/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="../js/dependencies/angular-file-upload-all.min.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/controllers/controllers.js"></script>
+</body>
+
+</html>
