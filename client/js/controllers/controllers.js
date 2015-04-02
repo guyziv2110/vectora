@@ -11,10 +11,8 @@ controllers.controller("DropZoneController", ['$scope', '$rootScope', '$upload',
       for (var i = 0; i < files.length; i++) {
         var file = files[i];
         $upload.upload({
-          url: 'upload/url',
-          fields: {
-            'username': $scope.username
-          },
+          url: '/file/upload',
+          method: 'POST',
           file: file
         }).progress(function(evt) {
           var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
