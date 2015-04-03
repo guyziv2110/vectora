@@ -8,6 +8,8 @@
   "dependencies": {
     "express": "*",
     "cookie-session": "*",
-    "connect-multiparty": "*"
+    "body-parser": "*",
+    "connect-multiparty": "*",
+    "ejs": "*"
   }
 }
