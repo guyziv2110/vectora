@@ -10,6 +10,7 @@
     "cookie-session": "*",
     "body-parser": "*",
     "connect-multiparty": "*",
-    "ejs": "*"
+    "ejs": "*",
+    "mongoose": "*"
   }
 }

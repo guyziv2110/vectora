@@ -6,15 +6,23 @@ var express = require('express')
   , routes = require('./server/routes/routes')
   , http = require('http')
   , path = require('path')
+  , mongoose = require('mongoose')
   , bodyParser = require('body-parser')
   , session = require('cookie-session');
 
+mongoose.connect('mongodb://admin:AVS!sma0t@ds061391.mongolab.com:61391/vectora', function(err, res) {
+  if(err) {
+    console.log('error connecting to MongoDB Database. ' + err);
+  } else {
+    console.log('Connected to Database ' + res);
+  }
+});
+
 var app = express();
 
-// all environment
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/client/views');
-app.engine('html', require('ejs').renderFile); // ' avi 8.8
+app.engine('html', require('ejs').renderFile);
 app.use(express.static(path.join(__dirname, 'client')));
 app.use(bodyParser());
 app.use(bodyParser.json());
