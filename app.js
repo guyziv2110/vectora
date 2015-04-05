@@ -12,9 +12,9 @@ var express = require('express')
 
 mongoose.connect('mongodb://admin:AVS!sma0t@ds061391.mongolab.com:61391/vectora', function(err, res) {
   if(err) {
-    console.log('error connecting to MongoDB Database. ' + err);
+    console.log('error connecting to db: ' + err);
   } else {
-    console.log('Connected to Database ' + res);
+    console.log('success connecting to db!');
   }
 });
 
