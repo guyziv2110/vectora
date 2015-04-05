@@ -3,14 +3,19 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node app.js"
+    "start": "node app"
   },
   "dependencies": {
-    "express": "*",
-    "cookie-session": "*",
     "body-parser": "*",
+    "connect-flash": "*",
     "connect-multiparty": "*",
+    "cookie-parser": "*",
     "ejs": "*",
-    "mongoose": "*"
+    "express": "*",
+    "express-session": "*",
+    "mongoose": "*",
+    "passport": "*",
+    "passport-facebook": "*",
+    "passport-google-oauth": "*"
   }
 }
