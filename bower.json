@@ -1,0 +1,11 @@
+{
+  "name": "vectora",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "",
+    "bootstrap": "",
+    "angular" : "",
+    "font-awesome" : "",
+    "ng-file-upload" : ""
+  }
+}
