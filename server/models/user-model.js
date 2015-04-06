@@ -3,8 +3,8 @@ var	Schema = mongoose.Schema;
  
 var userSchema = new Schema({
 
-    fullName:             { type: String, required: true },
-    email:                { type: String, required: true },
+    fullName:             { type: String },
+    email:                { type: String },
     facebook: {
       id:                 { type: String },
       token:              { type: String },
