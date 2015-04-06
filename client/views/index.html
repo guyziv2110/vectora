@@ -9,6 +9,7 @@
     <script type="text/javascript">
       window.user = <%- JSON.stringify(user) %>;
     </script>
+    <script src="../dist/vectora.min.js"></script>
 </head>
 
 <body ng-class="{'dragover': (dragDropState == 'dragover')}">
@@ -96,8 +97,6 @@
         </div>
     </div>
     <div class="dimmer"></div>
-
-    <script src="../dist/vectora.min.js"></script>
 </body>
 
 </html>
