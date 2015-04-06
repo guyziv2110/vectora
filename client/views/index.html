@@ -3,8 +3,12 @@
 
 <head>
     <title>Vectora</title>
+    <base href="/"></base>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../dist/vectora.css" rel="stylesheet" />
+    <script type="text/javascript">
+      window.user = <%- JSON.stringify(user) %>;
+    </script>
 </head>
 
 <body ng-class="{'dragover': (dragDropState == 'dragover')}">
@@ -64,10 +68,6 @@
         <div id="header">
             <div class="content-width">
               <a href="#" class="logo">VECTORA</a>
-              <ul id="login-btns">
-                <li><a href="/auth/facebook" class="btn btn-primary"><span class="fa fa-facebook fa-lg"></span> Login</a></li>
-                <li><a href="/auth/google" class="btn btn-danger"><span class="fa fa-google-plus fa-lg"></span> Login</a></li>
-              </ul>
             </div>
         </div>
         <div id="examples-bar">
@@ -79,12 +79,18 @@
         </div>
         <div id="main">
           <div id="main-inner">
-            <div class="drop-zone" ng-controller="DropZoneController" ng-file-drop droppable ng-model="files" drag-over-class="dragover" ng-multiple="false" allow-dir="false" accept="image/*">
+            <div class="drop-zone" ng-controller="DropZoneController" ng-file-drop droppable ng-model="files" drag-over-class="dragover" ng-multiple="false" allow-dir="false" accept="image/*" ng-show="session.isLoggedIn">
               <div class="drop-zone-inner">
                 <span>Drop your pixel graphic here</span>
                 <div class="picture-icon"><i class="fa fa-picture-o"></i></div>
                 <span>Or click to browse</span>
               </div>
+            </div>
+            <div class="login-buttons" ng-hide="session.isLoggedIn">
+              <ul id="login-btns">
+                <li><a href="/auth/facebook" class="btn btn-primary btn-lg"><span class="fa fa-facebook fa-lg"></span> Login</a></li>
+                <li><a href="/auth/google" class="btn btn-danger btn-lg"><span class="fa fa-google-plus fa-lg"></span> Login</a></li>
+              </ul>
             </div>
           </div>
         </div>

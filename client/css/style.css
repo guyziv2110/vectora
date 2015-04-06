@@ -298,3 +298,7 @@ body {
   opacity: 0.9;
   z-index: 3;
 }
+.login-buttons {
+  position: relative;
+  z-index: 10;
+}

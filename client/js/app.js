@@ -1,5 +1,25 @@
-var app = angular.module('vectora', ['controllers', 'angularFileUpload']).run(['$rootScope', function($rootScope) {
+var app = angular.module('vectora', ['controllers', 'services', 'angularFileUpload']).run(['$rootScope', '$window', 'sessionService', function($rootScope, $window, sessionService) {
 
+  $rootScope.session = sessionService;
+
+  $window.app = {
+    authState: function(state, user) {
+      $rootScope.$apply(function() {
+        switch (state) {
+          case 'success':
+            sessionService.authSuccess(user);
+            break;
+          case 'failure':
+            sessionService.authFailed();
+            break;
+          }
+      });
+    }
+  };
+
+  if ($window.user !== null) {
+    sessionService.authSuccess($window.user);
+  }
 }]);
 
 app.directive('droppable', ['$rootScope', function($rootScope) {
