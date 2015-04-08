@@ -48,7 +48,7 @@ module.exports = function(grunt) {
         }
       },
       options: {
-        mangle: true
+        mangle: false
       }
     }
   });
