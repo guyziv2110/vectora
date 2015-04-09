@@ -35,7 +35,7 @@ module.exports = function(grunt) {
           replacements: [
             {
               pattern: /..\/fonts\/fontawesome/ig,
-              replacement: '../bower_components/font-awesome/fonts/fontawesome'
+              replacement: '/bower_components/font-awesome/fonts/fontawesome'
             }
           ]
         }
