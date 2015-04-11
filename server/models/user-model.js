@@ -16,7 +16,13 @@ var userSchema = new Schema({
       token:              { type: String },
       email:              { type: String },
       name:               { type: String },
-    }
+    },
+	localUser: {
+      id:                 { type: String },
+      token:              { type: String },
+      email:              { type: String },
+      name:               { type: String },	
+	}
 });
 
 userSchema.statics.findByEmailOrQuery = function(email,query,callback) {
